@@ -1,0 +1,58 @@
+## Build results
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio settings
+.vscode/
+.vs/
+
+## Rider settings
+.idea/
+
+## ASP.NET runtime secrets
+**/secrets.json
+
+## Dotnet environment files
+.env
+*.env.*
+
+## NuGet packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Logs
+*.log
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+
+## Publish output
+publish/
+wwwroot/
+
+## Global JSON, if not needed
+global.json
+
+## Test results
+TestResults/
+
+## Node (caso use algum front dentro)
+node_modules/
+
+## Ignore user-generated database files (caso você tenha criado algo local)
+*.db
+*.sqlite
+
+## Others (remove se for relevante)
+*.swp
