@@ -6,16 +6,16 @@ namespace MovieApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class MoviesController : ControllerBase
+    public class MovieController : ControllerBase
     {
         private readonly MovieServices _movieService;
 
-        public MoviesController(MovieServices movieService)
+        public MovieController(MovieServices movieService)
         {
             _movieService = movieService;
         }
 
-        [HttpGet]
+        [HttpGet("AllMovies")]
         public IActionResult Get()
         {
             var movies = _movieService.GetAllMovies();
@@ -28,5 +28,14 @@ namespace MovieApi.Controllers
             var movies = _movieService.GetMoviesByGenre(genre);
             return Ok(new { movies });
         }
+
+        [HttpGet("release/{year}")]
+
+        public IActionResult GetByReleaseYear(int year)
+        {
+            var movies = _movieService.GetReleasesByYear(year);
+            return Ok(new { movies });
+        }
+
     }
 }
